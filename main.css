@@ -1,8 +1,5 @@
 :root {
-    /* the width of each circle is 1/3 of the screen width so each circle takes a 1/3 of the screen width */
-    --CirclesWidth: calc(100vw/3);
     /* (no specific calculations for the height) */
-    --CirclesHeight: 20vh;
     --primary-color: rgb(249, 178, 255);
     --secondary-color: rgb(164, 255, 225)
 
@@ -14,7 +11,6 @@
 }
 
 #topRectangle, #bottomRectangle {
-    /* NOTE: I used position absolute for header so I can use the z-index thing, to cut circles in half */
     /* I was forced to use position absolute on the footer also so I can bring it down
     because when I used position absolute for the header the footer goes up and hide behind it */
     box-shadow: 1px 1px 1px black;
