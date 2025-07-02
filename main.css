@@ -1,124 +1,46 @@
-:root {
-    /* (no specific calculations for the height) */
-    --primary-color: rgb(249, 178, 255);
-    --secondary-color: rgb(164, 255, 225)
-
-}
-
 * {
     margin: 0;
     padding: 0;
 }
 
-#topRectangle, #bottomRectangle {
-    /* I was forced to use position absolute on the footer also so I can bring it down
-    because when I used position absolute for the header the footer goes up and hide behind it */
-    box-shadow: 1px 1px 1px black;
-}
-
-#topRectangle {
-    background-color: var(--primary-color);
-    display: flex; flex-direction: column; justify-content: flex-start; align-items: center;
-}
-
-#bottomRectangle {
-    background-color: var(--secondary-color);
-    /* bringing down the footer */
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-}
-
-/* controls the labels inside the bottom rectangle */
-#bottomRectangle > div > label {
-    /* border: 1px solid black; */
-    margin-bottom: 5px;
-    font-family: sans-serif;
-}
-
-label {
-    font-size: 4vh;
-}
-label > input {
-    margin: 5px;
-}
-
-label > button {
-    margin-left: 5px;
-    background-color: var(--secondary-color);
-    border: 0;
-}
-
-label > button:hover {
-    /* background: linear-gradient(to bottom right, rgb(94, 201, 165), rgb(164, 255, 225), rgb(94, 201, 165)); */
-    padding: 3px;
-    border-top: 1px solid rgb(199, 253, 234);
-    border-left: 1px solid rgb(199, 253, 234);
-    border-bottom: 1px solid rgb(127, 194, 172);
-    border-right: 1px solid rgb(127, 194, 172);
-    font-size: 15px;
-}
-
-.circle {
-    position: absolute;
-    background-color: var(--primary-color);
-    z-index: 1;
-    border-radius: var(--CirclesWidth);
-    border-bottom: 2px solid gr;
-    /* adjusting width and height */
-    width: var(--CirclesWidth);
-    height: var(--CirclesHeight);
-
-}
-
-.firstCircle {
-    /* making the circle stick to the left */
-    left: 0;
-    /* cenrering verticaly */
-    top: 50%;
-    margin-top: calc(var(--CirclesHeight)/-2);
-
-
-}
-.secondCircle {
-    /* centering horizantaly */
-    left: 50%;
-    margin-left: calc(var(--CirclesWidth)/-2);
-    /* centering verticaly */
-    top: 50%;
-    margin-top: calc(var(--CirclesHeight)/-2);
-}
-
-.thirdCircle {
-    /* making the circle stick to the right */
-    right: 0;
-    /* cenrering verticaly */
-    top: 50%;
-    margin-top: calc(var(--CirclesHeight)/-2);
-}
-
-#submitButton {
-    background-color: rgb(251, 212, 255);
+#top_bar {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
     padding: 5px;
-    margin: 10px;
-    font-family: Apple Chancery, cursive;
-    outline: 2px solid var(--secondary-color);
-    border-radius: 2px;
-    /* centering the 'sumbit' text */
-    text-align: center;
-    font-size: 4vw;
+    background-color: rgb(0, 0, 0);
 }
 
-#textBox {
-    font-size: 4vw;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-left: 2px solid rgb(235, 199, 240);
-    border-top: 2px solid rgb(235, 199, 240);
-    border-right: 2px solid rgb(205, 175, 209);
-    border-bottom: 2px solid rgb(205, 175, 209);
+#logo {
+    display: flex;
+    align-items: center;
 }
 
-#header { 
-    font-family: Apple Chancery, cursive;
-    font-size: 10vw;
-    color: rgb(0, 0, 0);
+#logo, #logo_image {
+    height: inherit;
 }
+
+#links-container {
+    flex-grow: 0.3;
+    display: flex;    
+    justify-content: space-around;
+}
+
+.topbar-link {
+    color: #ff6d83;
+    text-decoration: none;
+}
+
+#account {
+    height: inherit;
+    clip-path:circle() ;
+}
+
+#title {
+    font-family: Apple Chancery, cursive;
+    font-size: 30px;
+
+}
+

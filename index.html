@@ -13,19 +13,28 @@
 <body>  	
     <div id="top_bar">
         <div id="logo">
-            <img src="/assets/logo.png" alt="LOGO">
+            <img id="logo_image" src="assets/logo.png" alt="LOGO">
+            <div id="title">Organizable</div>
         </div>
-        <div id="title"> To Do List</div>
-        <div id="account">
-            <img src="" alt="">
+
+        <div id="links-container">
+            <a href="" class="topbar-link">Home</a>
+            <a href="" class="topbar-link">About</a>
+            <a href="" class="topbar-link">Download</a>
+            <a href="" class="topbar-link">Contact</a>
         </div>
+
+        <img id="account" src="assets/account.jpeg" alt="">
     </div>
-    <div id="topRectangle">
+
+    <div id="header">
 	<p id="header">TO-DO list</p>
         <input type="text" id="textBox" placeholder="Put your TO-DO's here!">
         <button type="submit" id="submitButton">Add</button>
     </div>
-    <div id="bottomRectangle">
+    <div id="todos-container">
+        
+    </div>
     <!-- script -->
     <script src="main.js"></script>
 </body>
